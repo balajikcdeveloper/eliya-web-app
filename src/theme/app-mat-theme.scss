@@ -1,0 +1,100 @@
+//importing to unlock the Angular theme
+@import '~@angular/material/theming';
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+//included to add base styles of the Angular
+@include mat-core();
+// initializing the color values
+$app-primary: mat-palette($mat-blue-grey, 800, 50);
+$app-accent: mat-palette($mat-grey, 600);
+$app-warn: mat-palette($mat-amber, 500);
+
+// initializing the theme
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+// initializing the new typography
+$app-typography: mat-typography-config( $font-family: 'Muli', $title: mat-typography-level(20px, 32px, 800) );
+
+// Assigning the typography to the app
+@include mat-core($app-typography);
+
+// Assigning the theme to the app
+@include angular-material-theme($app-theme);
+$auth-primary: mat-palette($mat-indigo, 50, 100);
+$auth-accent: mat-palette($mat-indigo, 50, 100);
+$auth-warn: mat-palette($mat-pink, 400, 500);
+$auth-theme: mat-dark-theme($auth-primary, $auth-accent, $auth-warn);
+
+
+@mixin mix-toggle-theme($app-theme) {
+  $primary: map-get($app-theme, primary);
+  $accent: map-get($app-theme, accent);
+
+  .mat-button-toggle-checked {
+    background-color: mat-color($primary);
+    font-weight: bold;
+
+    .mat-button-toggle-button {
+      color: $light-primary-text;
+    }
+  }
+
+  .mat-button-toggle-group-appearance-standard {
+    border: 0;    margin: 10px 0;    border-radius: 0;
+    .mat-button-toggle-label-content { line-height: 32px;      padding: 0 25px;    }
+  }
+}
+
+// Include the mixin
+@include mix-toggle-theme($app-theme);
+
+//Variable declaration
+$light-color: rgba(255, 255, 255, 0.3);
+
+//Common classes
+.hide {
+  display: none;
+}
+.mat-flat-button { border-radius: 0; font-size: 12px; }
+.mat-form-field { width: 100%; }
+.primary-icon-textbox {
+  @include mat-form-field-theme($auth-theme); // Form-Field theme
+  @include mat-input-theme($auth-theme);
+  width: 75%; border-radius: 0; font-size: 12px;
+  i { font-size: 17px; }
+  .mat-form-field-outline { background-color: $light-color; }
+  .mat-input-element { line-height: 17px; }
+  .mat-form-field-outline-start, .mat-form-field-outline-end { border-radius: 0 !important; }
+  .mat-form-field-infix { padding: 0.3em 0 0.5em 0; }
+  .mat-form-field-wrapper { margin: 1em 0 0 1.5em; padding: 0; }
+}
+.normal-icon-textbox {
+  @include mat-form-field-theme($auth-theme); // Form-Field theme
+  @include mat-input-theme($auth-theme);
+  width: 100%;  border-radius: 0;  font-size: 12px;
+  i {    font-size: 21px;    color: mat-color($mat-indigo, 500, .54);  }
+  .mat-form-field-outline {    background-color: $light-color;  }
+  .mat-input-element {    line-height: 17px;    color: mat-color($app-primary);caret-color:mat-color($app-primary);
+    &::placeholder {      color: mat-color($mat-indigo, 500, .54);      opacity: 1;    }
+  }
+  .mat-form-field-outline-start, .mat-form-field-outline-end {    border-radius: 0 !important;    border: 0;  }
+  .mat-form-field-infix {    padding: 0.3em 0 0.5em 0;  }
+  .mat-form-field-wrapper {    margin: 0;    padding: 0;  }
+}
+
+/* Loader*/
+.loader { display: grid; position: absolute; left: 0; right: 0; bottom: 0; top: 0; background: $light-primary-text; z-index: 9;
+  .mat-progress-spinner { align-self: center; justify-self: center; }
+}
+.notification-custom-styles { padding: 4% 5% 4% 4% !important; background-image: none !important; }
+.notification-success { background-color: mat-color($mat-green, 500, 1); }
+.notification-error { background-color: mat-color($mat-red, 500, 1); }
+.notification-info { background-color: mat-color($mat-light-blue, 400, 1); }
+.notification-warning { background-color: mat-color($mat-yellow, 100, 1); }
+.mat-gray-button {  background: mat-color($mat-grey, 600, 1);  color: $light-primary-text;  border-radius:0;}
+
+.mat-button-toggle {  color: mat-color($mat-grey, 600, 1);  background: mat-color($mat-grey, 600, .07);  border-bottom: 2px solid mat-color($app-primary);}
+.mat-button-toggle-checked {  background-color: mat-color($app-primary);  color: $light-primary-text;}
+.mat-chip-list-wrapper {  padding: 0 30px;  margin: 10px 0;}
+.mat-chip-list-wrapper .mat-standard-chip {  margin: 4px 8px;}
+.mat-chip{  font-size: 11px;  font-weight: 500;}
+.mat-standard-chip {  padding: 3px 9px;  border-radius: 10px;  cursor: pointer;  min-height: 22px;}

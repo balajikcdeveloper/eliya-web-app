@@ -1,0 +1,54 @@
+@import "./app-mat-theme";
+@import "./mat-components/app-expansion-panel";
+@import "./mat-components/app-mat-table";
+$i : unquote("!important");
+$spaceamounts: (5, 8, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right, ''); // Leave this variable alone
+
+//Common functions or mixins
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    $hiphen: if((str-slice($side, 0, 1)!=''),'-','');
+
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin#{$hiphen}#{$side}: #{$space}px !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding#{$hiphen}#{$side}: #{$space}px !important;
+    }
+  }
+}
+@mixin primarybg {
+  background: mat-color($app-primary);
+  @content;
+}
+
+@mixin fade-70 {
+  opacity: 0.7;
+  @content;
+}
+
+@mixin text-ellipsis {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  @content;
+}
+
+/*Screen Width Declaration */
+$desktop: 840px;
+$large-desktop: 1400px;
+
+//Functions related to responsiveness
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+@mixin large-desktop {
+    @media (min-width: #{$large-desktop}) {
+        @content;
+    }
+}
+

@@ -1,1 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+@import "theme/app-mat-theme";
+@import "theme/app-utilities";
+
+
+html, body { height: 100%; }
+body {  margin: 0;  font-family: 'Muli';  background: mat-color($mat-indigo, 50, 1);}
+
+//Application common styles
+app-linked-accounts, .full-width, app-history {  width: 100%;}
+//Common classes
+.white-color { color: $light-primary-text; }
+.app-color { color: mat-color($app-primary); }
+.app-bg { background: mat-color($app-primary); }
+.app-text-color { color: mat-color($mat-grey, 600, 1); }
+.app-border-box{border:1px solid #ddd;}
+.divider { height: 100%; }
+.mat-card {  margin-bottom: 20px;}
+.float-left {  float: left;}
+.float-right {  float: right;}
+.notification-custom-styles { padding: 4% 5% 4% 4% !important; background-image: none !important; }
+.notification-success { background-color: #00C851 !important; }
+.notification-error { background-color: #ff4444 !important; }
+.notification-info { background-color: #33b5e5 !important; }
+.notification-warning { background-color: #ffbb33 !important; }
+
+.position-relative { position: relative !important; }
+
+
+.main-container {
+  width: 100%;
+  height: calc(100vh - 57px);
+}
+
+mat-sidenav {
+  @include mat-elevation-transition;
+  @include mat-elevation(2);
+}
+
+.mat-drawer-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.mat-drawer-container, .mat-drawer-content {
+  background: mat-color($mat-indigo, 50, 1);
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

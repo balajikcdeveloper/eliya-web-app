@@ -1,0 +1,15 @@
+<app-header></app-header>
+<mat-sidenav-container class="main-container" [hasBackdrop]="false">
+  <mat-sidenav #sidenav mode="side" opened>
+    <app-sidenav></app-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-card class="position-relative full-group-width">
+      <div class="loader">
+        <mat-spinner color="primary" [value]="80"></mat-spinner>
+      </div>
+      home
+    </mat-card>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

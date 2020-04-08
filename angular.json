@@ -7,7 +7,23 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
-          "style": "scss"
+          "style": "scss",
+          "spec": false
+        },
+        "@schematics/angular:module": {
+          "spec": false
+        },
+        "@schematics/angular:service": {
+          "spec": false
+        },
+        "@schematics/angular:guard": {
+          "spec": false
+        },
+        "@schematics/angular:pipe": {
+          "spec": false
+        },
+        "@schematics/angular:class": {
+          "spec": false
         }
       },
       "root": "",
@@ -28,6 +44,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -92,6 +109,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +141,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ExpenseWebApp"
+    }
+  },
+  "defaultProject": "ExpenseWebApp",
+  "cli": {
+    "analytics": "8df1dd3a-3800-4b47-a3c5-5bd6732b049e"
+  }
 }

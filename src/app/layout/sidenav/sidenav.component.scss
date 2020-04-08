@@ -1,0 +1,18 @@
+@import "../../../theme/app-utilities.scss";
+.app-sidenav{
+ width: 262px;
+ .mat-list-item{
+   text-decoration: none;
+   color:#757575;
+   .mat-icon{
+     color:rgba(63, 81, 181, .54);
+   }
+   &:hover {
+    color:#fff;
+    .mat-icon{
+      color:#fff;
+    }
+    @include primarybg;
+   }
+ }
+}

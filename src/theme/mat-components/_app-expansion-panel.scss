@@ -1,0 +1,24 @@
+.mat-expansion-panel-header.mat-expanded,
+.mat-expansion-panel-header.mat-expanded:hover,
+.mat-expansion-panel-header:hover,
+.mat-expansion-panel-header.mat-expanded:focus {
+    background:$light-primary-text;
+    color:  mat-color($app-primary);
+    .mat-expansion-panel-header-title,
+    .mat-expansion-indicator::after{
+      color:  mat-color($app-primary);
+    }
+}
+.mat-expansion-panel-header,
+.mat-expansion-panel-header:focus {
+  background: mat-color($mat-indigo, 500, .5);
+  .mat-expansion-panel-header-title,
+  .mat-expansion-indicator::after{
+    color: $light-primary-text;}
+}
+.mat-expansion-panel-header.mat-expanded {
+  .mat-expansion-panel-header-title{ font-size: 18px;  font-weight: bold;}
+}
+.mat-expansion-panel{
+  margin: 0 0 4px;
+}
