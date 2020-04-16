@@ -27,6 +27,7 @@
     "guid-typescript": "^1.0.9",
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
+    "ngx-cookie-service": "^3.0.4",
     "ngx-infinite-scroll": "^8.0.1",
     "ngx-toastr": "^12.0.1",
     "ngx-translate-multi-http-loader": "^3.0.0",

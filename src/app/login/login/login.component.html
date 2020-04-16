@@ -1,1 +1,18 @@
 <p>login auth component works!</p>
+<form class="form" (ngSubmit)="loginCheck(login)">
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput type="text" [(ngModel)]="login.email" name="email" />
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input
+      matInput
+      type="password"
+      [(ngModel)]="login.password"
+      name="password"
+    />
+  </mat-form-field>
+  <input type="submit" value="Submit" class="btn" />
+</form>

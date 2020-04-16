@@ -7,12 +7,10 @@ import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LayoutModule } from './layout/layout.module';
 import { LoginModule } from './login/login.module';
-
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -20,9 +18,9 @@ import { LoginModule } from './login/login.module';
     SharedModule.forRoot(),
     BrowserAnimationsModule,
     LayoutModule,
-    LoginModule
+    LoginModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [CookieService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
