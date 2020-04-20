@@ -1,0 +1,186 @@
+.login-page {
+  display: flex;
+  justify-content: space-between;
+
+  .login-left {
+    background-image: url("../../../assets/img_login_bg.png");
+    width: 100%;
+    max-width: 50%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top left;
+    background-color: #e4e3e356;
+
+    .slider-wrap {
+      .single-slider {
+        .slider-image {
+          margin-left: 85px;
+          max-width: 600px;
+          margin-top: 70px;
+          margin-right: 85px;
+        }
+
+        .slider-title {
+          color: #253a4b;
+          font-size: 34px;
+          font-family: "Montserrat";
+          text-align: center;
+        }
+
+        .slider-content {
+          color: #253a4b;
+          font-size: 18px;
+          font-family: "Montserrat";
+          text-align: center;
+          line-height: 46px;
+        }
+      }
+
+      .slider-nav {
+        text-align: center;
+
+        .dot {
+          height: 6px;
+          width: 6px;
+          border: 1.9px solid #f23b52;
+          background-color: transparent;
+          border-radius: 50%;
+          display: inline-block;
+          margin-right: 10px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: #f23b52;
+          }
+        }
+      }
+    }
+  }
+
+  .login-right {
+    width: 50%;
+    height: 100vh;
+    background-color: white;
+    float: right;
+    font-family: fantasy;
+
+    .login-form-wrap {
+      margin-top: 145px;
+
+      .logo-image {
+        width: 100%;
+        max-width: 257px;
+        height: 100%;
+        max-height: 115px;
+        display: flex;
+        margin: 0px auto;
+      }
+
+      p {
+        font-family: "Montserrat";
+        color: rgba(77, 79, 92, 0.473);
+        font-size: 20px;
+        margin-top: 50px;
+        text-align: center;
+      }
+
+      .login-form {
+        display: flex;
+        justify-content: center;
+        margin-top: 40px;
+
+        .textbox-form {
+          min-width: 150px;
+          max-width: 500px;
+          width: 51%;
+        }
+
+        ::ng-deep
+          .mat-focused
+          .mat-form-field-underline
+          .mat-form-field-ripple {
+          background-color: #f23b52 !important;
+        }
+      }
+
+      .forget-pass {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px auto;
+        width: 100%;
+        max-width: 400px;
+        margin-top: 50px;
+        div {
+          margin: 0 auto;
+          h5 {
+            font-size: 14px;
+            font-family: "Montserrat";
+            color: rgba(116, 116, 121, 0.795);
+            cursor: pointer;
+          }
+        }
+      }
+
+      .login-btn {
+        width: 300px;
+        height: 48px;
+        background-color: #f23b52;
+        border: none;
+        border-radius: 33px;
+        font-family: "Montserrat";
+        color: white;
+        font-size: 18px;
+        margin: 0px auto;
+        justify-content: center;
+        display: flex;
+        margin-top: 50px;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .login-or {
+        p {
+          font-size: 18px;
+          color: rgba(77, 79, 92, 0.473);
+          text-align: center;
+          margin: unset;
+          margin-top: 30px;
+        }
+      }
+
+      .login-social-media {
+        display: flex;
+        justify-content: space-between;
+        margin: 0px auto;
+        width: 100%;
+        max-width: 250px;
+        margin-top: 30px;
+      }
+
+      .login-bottom-content {
+        width: 300px;
+        background-color: rgba(235, 235, 235, 0.705);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px auto;
+        border-radius: 24px;
+        height: 48px;
+        font-family: "Montserrat";
+        margin-top: 36px;
+
+        h6 {
+          font-size: 16px;
+          color: #253a4b;
+          margin: unset;
+
+          a {
+            color: #f23b52;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+}

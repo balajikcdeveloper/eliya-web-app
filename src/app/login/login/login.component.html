@@ -1,4 +1,95 @@
-<p>login auth component works!</p>
+<div class="login-page">
+  <section class="login-left">
+    <!-- slider-wrap -->
+    <div class="slider-wrap">
+      <div class="single-slider">
+        <!-- single-slider -->
+        <div>
+          <img src="../../../assets/img_slider_01.png" class="slider-image" />
+        </div>
+        <!-- slider-title -->
+        <div>
+          <h3 class="slider-title">Goals made easy</h3>
+        </div>
+        <div>
+          <p class="slider-content">
+            objectives you set for how you’ll save and spend money. They <br />
+            can be things you hope to achieve in the short term or further<br />
+            down the road
+          </p>
+        </div>
+      </div>
+      <div class="slider-nav">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="login-right">
+    <div class="login-form-wrap">
+      <img src="../../../assets/logo.png" class="logo-image" />
+      <p>Welcome back! Please login to your account.</p>
+      <div class="login-form">
+        <form class="textbox-form">
+          <mat-form-field class="username">
+            <mat-label>Email</mat-label>
+            <input
+              matInput
+              type="text"
+              [(ngModel)]="login.email"
+              name="email"
+            />
+          </mat-form-field>
+
+          <mat-form-field class="password">
+            <mat-label>Password</mat-label>
+            <input
+              matInput
+              type="password"
+              [(ngModel)]="login.password"
+              name="password"
+            />
+          </mat-form-field>
+        </form>
+      </div>
+      <div class="forget-pass">
+        <div>
+          <h5>Forgot Password?</h5>
+        </div>
+      </div>
+      <div>
+        <button type="button" (click)="loginCheck(login)" class="login-btn">
+          LOGIN
+        </button>
+      </div>
+      <div class="login-or">
+        <p>or</p>
+      </div>
+      <div class="login-social-media">
+        <div class="ml-20 mr-20">
+          <img src="../../../assets/img_icon_google.png" />
+        </div>
+        <div class="ml-20 mr-20">
+          <img src="../../../assets/img_icon_facebook.png" />
+        </div>
+        <div class="ml-20 mr-20">
+          <img src="../../../assets/img_icon_twitter.png" />
+        </div>
+      </div>
+      <div class="login-bottom-content">
+        <h6>
+          Don't have account?
+          <a href="#" style="text-decoration: none;"><strong>SIGNUP</strong></a>
+        </h6>
+      </div>
+    </div>
+  </section>
+</div>
+<!--old code-->
+<!-- <p>login auth component works!</p>
 <form class="form" (ngSubmit)="loginCheck(login)">
   <mat-form-field appearance="fill">
     <mat-label>Email</mat-label>
@@ -7,12 +98,9 @@
 
   <mat-form-field appearance="fill">
     <mat-label>Password</mat-label>
-    <input
-      matInput
-      type="password"
-      [(ngModel)]="login.password"
-      name="password"
-    />
+    <input matInput type="password" [(ngModel)]="login.password" name="password" />
   </mat-form-field>
   <input type="submit" value="Submit" class="btn" />
 </form>
+<button mat-button color="primary" (click)="logout()">Logout</button>
+<button mat-flat-button color="primary" (click)="getWallets()">Wallets</button> -->

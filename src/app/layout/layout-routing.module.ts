@@ -3,25 +3,34 @@ import { Routes, RouterModule } from '@angular/router';
 import { ErrorPageComponent } from '../shared/components/micro/error-page.component';
 import { LayoutComponent } from './layout.component';
 
-
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
-    component: LayoutComponent
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('../dashboard/dashboard.module').then(
+            (module) => module.DashboardModule
+          ),
+      },
+      { path: '**', component: ErrorPageComponent },
+    ],
   },
   {
     path: '**',
-    component: ErrorPageComponent
-  }
+    component: ErrorPageComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class LayoutRoutingModule { }
+export class LayoutRoutingModule {}

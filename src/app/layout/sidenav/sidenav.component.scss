@@ -1,18 +1,30 @@
-@import "../../../theme/app-utilities.scss";
-.app-sidenav{
- width: 262px;
- .mat-list-item{
-   text-decoration: none;
-   color:#757575;
-   .mat-icon{
-     color:rgba(63, 81, 181, .54);
-   }
-   &:hover {
-    color:#fff;
-    .mat-icon{
-      color:#fff;
+.dashboard_menu {
+  width: 100%;
+  max-width: 160px;
+  height: calc(100vh - 100px);
+  background-color: #f23b52;
+  border-top-right-radius: 30px;
+  ul {
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    padding: 35px;
+    width: 87px;
+    margin: 0;
+    li {
+      display: block;
+      margin-bottom: 40px;
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        text-align: center;
+        span {
+          color: white;
+        }
+      }
     }
-    @include primarybg;
-   }
- }
+  }
 }

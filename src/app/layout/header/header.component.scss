@@ -1,34 +1,60 @@
-@import "../../../theme/app-mat-theme";
-@import "../../../theme/app-utilities.scss";
-
-$white: #ffffff;
-.top-header {
-  @include mat-elevation-transition;
-  @include mat-elevation(2);
-    .mat-toolbar-multiple-rows, mat-toolbar-row { min-height: inherit; height:inherit; padding:0 5px; }
-}
-.logo { width:250px; height: 37px;margin:10px 0 0;
-        img{ width:100%; }
-}
-.user-profile-link {color: $white;}
-.header-user-dropdown{
-    app-dropdown { color:$white; font-size:14px; }
-}
-.nav-top-right { color: $white;
-    &-button { font-size: 12px; border-radius: 0; padding: 10px 15px; }
-    a { border:1px solid rgba(255,255,255,.2); border-top:0; border-bottom: 0; border-left:0; }
-    a:first{ border-left:1px solid rgba(255,255,255,.2); }
-     .mat-menu-item { font-size: 12px; line-height:28px; }
-}
-.btn-notification { margin: 0px; padding-right: 30px; }
-.header-notification-icon { font-size:10px; }
-.main-navbar { width: 100%; height:50px; padding-top:0px !important; padding-bottom:0px !important;
-    &-list { width:100%; display: flex; flex-wrap: wrap; align-items: center; list-style-type: none; padding: 0px;
-        &-last-item { margin-left:auto; }
-        &-item { color: $white; font-weight:600; font-size:14px;
-            &.active-menu { color: $white; }
+.header_section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 40px;
+  height: 100px;
+  .logo img {
+    max-width: 100%;
+    margin: 15px 0px 20px 0px;
+  }
+  .notification_section {
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        margin-left: 60px;
+        a {
+          text-decoration: none;
+          color: #d5d5d5;
+          font-size: 36px;
         }
+      }
     }
-    &-link { display: flex; justify-content: center; color: $white; font-size: 14px; padding-left: 16px; padding-right: 16px; text-decoration: none; }
-    &-icon-size { font-size:36px; width:36px; height:36px; margin-right:10px; }
+  }
+}
+.mat-toolbar {
+  background-color: white;
+  height: 100px;
+  .example-spacer {
+    flex: 1 1 auto;
+  }
+  .logo img {
+    max-width: 100%;
+    margin: 30px 0 0;
+  }
+  .notification_section {
+    ul {
+      list-style: none;
+      li {
+        display: inline-block;
+        margin-left: 60px;
+        a {
+          text-decoration: none;
+          color: #d5d5d5;
+          span {
+            font-size: 36px;
+          }
+        }
+      }
+    }
+  }
+}
+.icon-display {
+  transform: scale(2);
+  color: #d5d5d5;
+}
+.mat-button .mat-ripple.mat-button-ripple {
+  transition-duration: 0ms !important;
+  display: none;
 }

@@ -1,35 +1,85 @@
-<div class="top-header">
-  <mat-toolbar class="app-bg" color="primary" fxLayout="row" fxLayoutAlign="start">
-      <mat-toolbar-row class="container-padding" fxLayout="row" fxLayoutAlign="start">
-          <div fxLayout="row" fxLayoutAlign="none" fxFlex="20">
-       <!-- <button mat-icon-button>
-            <mat-icon class="white-color">menu</mat-icon>
-          </button>-->
-        <span class="logo"><a href="#!"><img src="../../../assets/solman-logo.png" alt="Solutions Management" /></a></span>
-          </div>
-        <div fxLayout="row" fxLayoutAlign=" none" fxFlex="60">
-          tests
-        </div>
-        <div fxFlex="20" fxLayout="row" fxLayoutAlign="end">
-        <div class="nav-top-right" fxLayout="row" fxLayoutAlign="end center">
-            <a mat-flat-button color="primary" class="btn-notification button-default nav-top-right-button">
-                <mat-icon>notifications_none</mat-icon>
-                <span matBadge="4" matBadgeColor="warn" matBadgeOverlap="false" class="notification-badge"></span>
-            </a>
-              <a mat-button class="nav-top-right-button">II170</a>
-              <a mat-flat-button color="primary" class="button-default nav-top-right-button">
-                  <mat-icon>apps</mat-icon>
-              </a>
-              <a mat-button [matMenuTriggerFor]="userName" class="nav-top-right-button">
-                  Balaji K C
-                  <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true">keyboard_arrow_down</mat-icon>
-              </a>
-              <mat-menu #userName="matMenu" overlapTrigger="false" xPosition="before" class="nav-top-right-button">
-                  <button mat-menu-item>Logout</button>
-              </mat-menu>
-          </div>
-
-        </div>
-      </mat-toolbar-row>
-  </mat-toolbar>
-</div>
+<!-- <header class="header_section">
+  <div class="logo">
+    <img src="../../../assets/logo_sm.png" />
+  </div>
+  <div class="notification_section">
+    <ul>
+      <li>
+        <a href="#"><img src="../../../assets/img_icon_search.png" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="../../../assets/img_icon_notification.png" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="../../../assets/img_icon_settings.png" /></a>
+      </li>
+      <li>
+        <a href="#"><img src="../../../assets/img_profile.png" /></a>
+      </li>
+    </ul>
+  </div>
+</header> -->
+<mat-toolbar>
+  <mat-toolbar-row>
+    <div class="logo">
+      <img src="../../../assets/logo_sm.png" />
+    </div>
+    <span class="example-spacer"></span>
+    <!-- <div class="notification_section">
+      <ul>
+        <li>
+          <a href="#"
+            ><span class="material-icons">
+              search
+            </span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><img src="../../../assets/img_icon_notification.png"
+          /></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../assets/img_icon_settings.png" /></a>
+        </li>
+        <li>
+          <a href="#"><img src="../../../assets/img_profile.png" /></a>
+        </li>
+      </ul>
+    </div> -->
+    <div class="nav-top-right" fxLayout="row" fxLayoutAlign="end center">
+      <a mat-button class="button-default nav-top-right-button mr-40">
+        <mat-icon class="icon-display">search</mat-icon>
+      </a>
+      <a
+        mat-button
+        class="btn-notification button-default nav-top-right-button mr-40"
+      >
+        <mat-icon class="icon-display">notifications_none</mat-icon>
+        <span
+          matBadge="4"
+          matBadgeColor="warn"
+          matBadgeOverlap="false"
+          class="notification-badge"
+        ></span>
+      </a>
+      <a mat-button class="button-default nav-top-right-button mr-40">
+        <mat-icon class="icon-display">settings</mat-icon>
+      </a>
+      <a mat-button [matMenuTriggerFor]="userName" class="nav-top-right-button">
+        <img class="mr-20" src="../../../assets/img_profile.png" /> Balaji K C
+        <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true"
+          >keyboard_arrow_down</mat-icon
+        >
+      </a>
+      <mat-menu
+        #userName="matMenu"
+        overlapTrigger="false"
+        xPosition="before"
+        class="nav-top-right-button"
+      >
+        <button mat-menu-item>Logout</button>
+      </mat-menu>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>
