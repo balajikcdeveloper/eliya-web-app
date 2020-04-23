@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ErrorPageComponent } from '../shared/components/micro/error-page.component';
 import { LayoutComponent } from './layout.component';
+import { AppGuard } from './app.guard';
 
 const routes: Routes = [
   {
@@ -12,6 +13,7 @@ const routes: Routes = [
   {
     path: 'home',
     component: LayoutComponent,
+    canActivate: [AppGuard],
     children: [
       {
         path: '',

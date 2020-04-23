@@ -50,6 +50,7 @@
               matInput
               type="password"
               [(ngModel)]="login.password"
+              (keyup.enter)="loginCheck(login)"
               name="password"
             />
           </mat-form-field>

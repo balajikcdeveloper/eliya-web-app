@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Login } from '../models/login-dto';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { CookieService } from 'ngx-cookie-service';
-import { NotificationService } from '../../shared/services/notification.service';
 import { Router } from '@angular/router';
+import { NotificationService } from '../../shared/services/general/notification.service';
 
 @Component({
   selector: 'app-login',
@@ -28,7 +28,6 @@ export class LoginComponent implements OnInit {
         if (result && result.token) {
           this.authService.setToken(result.token);
           console.log(result);
-          this.notificationService.showSuccessMessage('Login Successful');
           this.router.navigateByUrl('/app/home');
         }
       },
@@ -38,22 +37,5 @@ export class LoginComponent implements OnInit {
         );
       }
     );
-  }
-  getWallets() {
-    this.authService.getWallets().subscribe(
-      (result) => {
-        console.log(result);
-      },
-      (error) => {
-        this.notificationService.showErrorMessage(
-          'User not authenticated! pleaae login.'
-        );
-      }
-    );
-  }
-  logout() {
-    this.authService.logoutUser().subscribe((res) => {
-      if (res) this.notificationService.showSuccessMessage('Logout Successful');
-    });
   }
 }

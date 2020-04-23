@@ -1,5 +1,8 @@
 <section class="dashboard_section">
   <div class="welcome_section">
+    <!-- <div class="loader">
+      <mat-spinner color="primary" [value]="80"></mat-spinner>
+    </div> -->
     <div>
       <h3>Hello,<span>Balaji K C</span></h3>
       <br />
@@ -60,14 +63,19 @@
   </div>
   <div class="budjet_section">
     <div>
-      <p>Budget</p>
+      <p>My Wallet</p>
     </div>
     <div class="budjet_content">
       <ul>
-        <li>Total Budjet</li>
-        <p>₹ 18,500</p>
-        <li>Expense</li>
-        <p>₹ 9,250</p>
+        <li>
+          Balance
+          <p>{{ total | currency: "₹ " }}</p>
+        </li>
+
+        <li>
+          Expense
+          <p>₹ 9,250</p>
+        </li>
       </ul>
       <div>
         <img src="../../../assets/img_pie_chart.png" />
