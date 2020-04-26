@@ -22,9 +22,8 @@ export class AuthService {
   loginUser(user): Observable<Login> {
     return this.http.post<Login>(this.loginUrl, user, httpOptions);
   }
-  logoutUser() {
+  removeToken() {
     this.cookieService.delete('token');
-    return this.isAuthenticated();
   }
   public isAuthenticated(): boolean {
     return this.checkToken();

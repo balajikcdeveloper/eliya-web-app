@@ -1,0 +1,199 @@
+.wallet-items{
+    display: flex;
+    justify-content: space-between;
+    width:100%;
+    max-width: 350px;
+    height: 150px;
+    background-color: #F4F5F6;
+    border-radius: 30px;
+    padding: 35px 30px;
+    margin-top: 62px;
+    margin-left: 191px;
+    .wallet_content{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        h4{
+            color:#253A4B;
+            font-size:24px;
+            font-family:'Montserrat';
+            margin: unset;
+            font-weight: bold;
+        }
+        h3{
+            color:#F23B52;
+            font-size:32px;
+            font-weight:medium;
+            font-family:'Montserrat';
+            margin: unset;
+            font-weight: bold;
+     
+    }
+  
+}
+.wallet-icons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color:rgb(165, 165, 165) ;
+    cursor: pointer;
+    .icon-display{
+        color:rgb(165, 165, 165) ;  
+    }
+}
+&.wallet-items:hover{
+    background-color: #F23B52;
+   
+    h4,
+    h3,
+    .icon-display{
+        color:#fff;
+    }
+
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .wallet-title{
+//     h4 {
+//         font-family: 'Montserrat';
+//         font-size: 48px;
+//         color: rgba(37, 58, 75, 0.5);
+//       }
+  
+// }
+// .wallet-total {
+//   display: flex;    
+//   justify-content: space-between;
+
+//   .wallet-section {
+//     width: 100%;
+//     max-width: 1170px;
+//     height: 100%;
+//     max-height: 25vh;
+//     border: 1px solid black;
+   
+//     .wallet-card {
+//       width: 100%;
+//       max-width: 350px;
+//       height: 100%;
+//       max-height: 200px;
+//       display: block;
+//         align-items: center;
+//       border-radius: 30px;
+//       background-color: rgb(10, 92, 173);
+
+//       .card-section {
+//           display: block;
+//           align-items: center;
+//           margin: auto 0px;
+//         h5 {}
+//         h6{}
+        
+//       }
+//       .card-icons {}
+
+//     }
+//   }
+
+//   .wallet-right-section {
+//     width: 100%;
+//     max-width: 205px;
+//     height: 100%;
+//     max-height: 1056px;
+//     border: 1px solid black;
+  
+//   }
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// :root{
+//     --font-family-Montserrat:'Montserrat';
+// }
+// .wallet_card{
+//     h4{
+//         color:#253A4B;
+//         font-size: 48px;
+//         font-family: var(--font-family-Montserrat);
+//         margin-bottom:62px;
+//         opacity: 0.5;
+//     }
+// }
+// .wallet_section{
+//     width:100%;
+//     display: flex;
+//     justify-content: space-between;
+//     .card_section{
+//         width:100%;
+//         max-width:350px;
+//         height:100%;
+//         max-height: 200px;
+//         display: block;
+//         align-items: space-between;
+//         border-radius: 30px;
+//         background-color: #F4F5F6;
+//         h5{
+//             color:#253A4B;
+//             font-family: var(--font-family-Montserrat);
+//             font-size: 24px;
+//         }
+//         h4{
+//             color:#F23B52;
+//             font-family: var(--font-family-Montserrat);
+//             font-size: 32px;
+//             font-weight: medium;
+//         }
+//         &:hover
+//         {
+//           background-color: #f23b52;
+
+//               h5,
+//               h4 {
+//                 color: #fff;
+//               }
+//         }
+
+//     }
+// }

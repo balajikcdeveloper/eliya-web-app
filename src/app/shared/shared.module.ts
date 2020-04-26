@@ -6,11 +6,15 @@ import { ErrorPageComponent } from './components/micro/error-page.component';
 import { MaterialModule } from './material.module';
 import { NotificationService } from './services/general/notification.service';
 import { CommonService } from './services/common.service';
+import { WalletsCardComponent } from './components/wallets-card/wallets-card.component';
+import { from } from 'rxjs';
+
+
 
 @NgModule({
-  declarations: [ErrorPageComponent],
+  declarations: [ErrorPageComponent, WalletsCardComponent ],
   imports: [CommonModule, MaterialModule, SharedRoutingModule],
-  exports: [ErrorPageComponent],
+  exports: [ErrorPageComponent, WalletsCardComponent],
   providers: [NotificationService, CommonService],
 })
 export class SharedModule {

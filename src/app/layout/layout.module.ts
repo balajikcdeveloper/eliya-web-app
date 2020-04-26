@@ -7,6 +7,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { MaterialModule } from '../shared/material.module';
 import { SharedModule } from '../shared/shared.module';
+import { WalletsModule } from '../wallets/wallets.module';
 
 
 
@@ -16,6 +17,7 @@ import { SharedModule } from '../shared/shared.module';
     CommonModule,
     MaterialModule,
     FlexLayoutModule,
+    WalletsModule,
     LayoutRoutingModule,
     SharedModule
   ],

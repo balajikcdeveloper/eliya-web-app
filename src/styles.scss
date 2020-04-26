@@ -102,3 +102,39 @@ body {
 .mat-drawer-container {
   background-color: $light-primary-text;
 }
+
+.eliya_content{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+  .left_content{
+    width: 100%;
+    max-width: calc(73% - 40px);
+    h3{
+      color: #253a4b;
+      font-size: 48px;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: left;
+      margin: 0px;
+      margin: 10px 0px 40px 40px;
+      opacity: 0.6;
+      span{
+        color: #253a4b;
+    font-size: 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    font-weight: normal;
+    opacity: 0.5;
+      }
+      }
+  }
+  .right_content{
+    width: 100%;
+    max-width: 27%;
+    height: calc(100vh - 121px);
+    background-color: #f2f2f2;
+    border-top-left-radius: 30px;
+    margin: 0 0 0 40px;
+  }
+}
