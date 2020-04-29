@@ -6,9 +6,11 @@ import { SharedModule } from '../shared/shared.module';
 import { WalletsRoutingModule } from './wallets-routing.module';
 import { MaterialModule } from '../shared/material.module';
 import { FormsModule } from '@angular/forms';
+import { WalletService } from './services/wallet.service';
 @NgModule({
   declarations: [WalletsListComponent, AddWalletComponent],
   imports: [CommonModule,FormsModule, MaterialModule, SharedModule,WalletsRoutingModule],
-  exports: [WalletsListComponent, AddWalletComponent]   
+  exports: [WalletsListComponent, AddWalletComponent],
+  providers:[WalletService]
 })
 export class WalletsModule { }

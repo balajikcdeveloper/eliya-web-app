@@ -2,6 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   import { from } from 'rxjs';
 import { CommonService } from 'src/app/shared/services/common.service';
 import { NotificationService } from 'src/app/shared/services/general/notification.service';
+import { WalletService } from '../services/wallet.service';
   
 @Component({
   selector: 'app-wallets-list',
@@ -15,7 +16,7 @@ export class WalletsListComponent implements OnInit {
   walletsList: any;
   
   constructor(
-    private commonService: CommonService,
+    private walletService: WalletService,
     private notificationService: NotificationService
   ) {}
 
@@ -24,13 +25,11 @@ export class WalletsListComponent implements OnInit {
   }
 
   getWalletsList() {
-    this.commonService.getWallets().subscribe(
+    this.walletService.getWallets().subscribe(
       (result: any) => {
         this.walletsList = result.data, function (wallet: any){
             return wallet;
-          
         }
-    console.log(result);
       },
       (error) => {
         this.notificationService.showErrorMessage(
