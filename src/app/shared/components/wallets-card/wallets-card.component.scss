@@ -1,18 +1,22 @@
+.wallet_box{
+    display: inline-block;
+    
+    margin:  2% 12% 0% 3% ;
 .wallet-items{
     display: flex;
     justify-content: space-between;
-    width:100%;
-    max-width: 350px;
-    height: 150px;
+    width:140%;
     background-color: #F4F5F6;
     border-radius: 30px;
-    padding: 35px 30px;
-    margin-top: 62px;
-    margin-left: 191px;
+    padding: 22px 30px 33px ;
+
+    margin: 9%;
+    
     .wallet_content{
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        
         h4{
             color:#253A4B;
             font-size:24px;
@@ -23,36 +27,46 @@
         h3{
             color:#F23B52;
             font-size:32px;
-            font-weight:medium;
+            
             font-family:'Montserrat';
             margin: unset;
             font-weight: bold;
      
     }
   
+
 }
 .wallet-icons{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-bottom: 3%;
+
     color:rgb(165, 165, 165) ;
     cursor: pointer;
     .icon-display{
-        color:rgb(165, 165, 165) ;  
+        color:rgb(165, 165, 165) ; 
+        margin: 29%;
+        
     }
 }
+
 &.wallet-items:hover{
     background-color: #F23B52;
-   
-    h4,
-    h3,
-    .icon-display{
+  
+  h4,h3,  .icon-display{
         color:#fff;
     }
 
 }
-
 }
+}
+.wallet_box:hover{
+    h3{
+        color: #fff;
+    }
+}
+
 
 
 

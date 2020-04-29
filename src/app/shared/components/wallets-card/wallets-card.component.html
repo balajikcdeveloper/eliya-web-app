@@ -3,8 +3,8 @@
 <div class="wallet_box">
   <div class="wallet-items">
   <div class="wallet_content">
-    <h4>CASH</h4>
-    <h3>₹ 8,500</h3>
+    <h4 title="{{lblName}}">{{lblName}}</h4>
+    <h3>{{ lblAmount | currency: 'INR':'symbol':'1.0-0' }}</h3>
   </div>
     <div class="wallet-icons">
    <a href="#">   <mat-icon class="icon-display">create</mat-icon></a>

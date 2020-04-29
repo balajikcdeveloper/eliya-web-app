@@ -2,10 +2,11 @@
   <section class="eliya_content">
     <div class="left_content">
         <h3>Wallets</h3>
-        <app-wallets-card></app-wallets-card> 
-        <app-wallets-card></app-wallets-card> 
-        <app-wallets-card></app-wallets-card> 
+        <span *ngFor="let wallet of walletsList">
+          <app-wallets-card [amount]="wallet.amount" [name]="wallet.name"></app-wallets-card>
+        </span>
     </div>
+    
   <div class="right_content">
     <app-add-wallet></app-add-wallet>
   </div>

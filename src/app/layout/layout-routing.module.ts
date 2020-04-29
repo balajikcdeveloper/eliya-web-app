@@ -3,8 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ErrorPageComponent } from '../shared/components/micro/error-page.component';
 import { LayoutComponent } from './layout.component';
 import { AppGuard } from './app.guard';
-import { WalletsListComponent } from '../wallets/wallets-list/wallets-list.component';
-import { WalletsCardComponent } from '../shared/components/wallets-card/wallets-card.component';
+
 
 
 
@@ -39,6 +38,21 @@ const routes: Routes = [
         loadChildren: () =>
           import('../wallets/wallets.module').then(
             (module) => module.WalletsModule
+          ),
+      },
+      { path: '**', component: ErrorPageComponent },
+    ],
+  },
+  {
+    path: 'category',
+    canActivate: [AppGuard],
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('../category/category.module').then(
+            (module) => module.CategoryModule
           ),
       },
       { path: '**', component: ErrorPageComponent },

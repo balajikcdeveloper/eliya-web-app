@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-wallets-card',
@@ -6,10 +6,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./wallets-card.component.scss']
 })
 export class WalletsCardComponent implements OnInit {
+  @Input()
+  amount: number;
+  @Input()
+  name: string;
 
+  lblAmount: number;
+  lblName: string;
   constructor() { }
 
   ngOnInit(): void {
+    this.lblAmount = this.amount;
+    this.lblName = this.name;
   }
 
 }

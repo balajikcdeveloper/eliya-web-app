@@ -8,13 +8,14 @@ import { NotificationService } from './services/general/notification.service';
 import { CommonService } from './services/common.service';
 import { WalletsCardComponent } from './components/wallets-card/wallets-card.component';
 import { from } from 'rxjs';
+import { CategoryCardComponent } from './components/category-card/category-card.component';
 
 
 
 @NgModule({
-  declarations: [ErrorPageComponent, WalletsCardComponent ],
+  declarations: [ErrorPageComponent, WalletsCardComponent, CategoryCardComponent ],
   imports: [CommonModule, MaterialModule, SharedRoutingModule],
-  exports: [ErrorPageComponent, WalletsCardComponent],
+  exports: [ErrorPageComponent, WalletsCardComponent,CategoryCardComponent],
   providers: [NotificationService, CommonService],
 })
 export class SharedModule {
