@@ -9,13 +9,22 @@ import { CommonService } from './services/common.service';
 import { WalletsCardComponent } from './components/wallets-card/wallets-card.component';
 import { from } from 'rxjs';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
-
-
+import { IndianCurrencyPipe } from './pipes/indian-currency.pipe';
 
 @NgModule({
-  declarations: [ErrorPageComponent, WalletsCardComponent, CategoryCardComponent ],
+  declarations: [
+    ErrorPageComponent,
+    WalletsCardComponent,
+    CategoryCardComponent,
+    IndianCurrencyPipe,
+  ],
   imports: [CommonModule, MaterialModule, SharedRoutingModule],
-  exports: [ErrorPageComponent, WalletsCardComponent,CategoryCardComponent],
+  exports: [
+    ErrorPageComponent,
+    WalletsCardComponent,
+    CategoryCardComponent,
+    IndianCurrencyPipe,
+  ],
   providers: [NotificationService, CommonService],
 })
 export class SharedModule {

@@ -22,7 +22,7 @@ export class DashboardComponent implements OnInit {
   getWallets() {
     this.commonService.getWallets().subscribe(
       (result: any) => {
-        this.total = _.sumBy(result.data, function (wallet: any) {
+        this.total = _.sumBy(result.data, (wallet: any) => {
           return wallet.amount;
         });
         console.log(result);
