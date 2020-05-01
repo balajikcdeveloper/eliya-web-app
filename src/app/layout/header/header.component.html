@@ -25,33 +25,11 @@
       <img src="../../../assets/logo_sm.png" />
     </div>
     <span class="example-spacer"></span>
-    <!-- <div class="notification_section">
-      <ul>
-        <li>
-          <a href="#"
-            ><span class="material-icons">
-              search
-            </span></a
-          >
-        </li>
-        <li>
-          <a href="#"
-            ><img src="../../../assets/img_icon_notification.png"
-          /></a>
-        </li>
-        <li>
-          <a href="#"><img src="../../../assets/img_icon_settings.png" /></a>
-        </li>
-        <li>
-          <a href="#"><img src="../../../assets/img_profile.png" /></a>
-        </li>
-      </ul>
-    </div> -->
     <div class="nav-top-right" fxLayout="row" fxLayoutAlign="end center">
       <a mat-button class="button-default nav-top-right-button mr-40">
         <mat-icon class="icon-display">search</mat-icon>
       </a>
-      <a
+      <!-- <a
         mat-button
         class="btn-notification button-default nav-top-right-button mr-40"
       >
@@ -62,11 +40,15 @@
           matBadgeOverlap="false"
           class="notification-badge"
         ></span>
-      </a>
+      </a> -->
       <a mat-flat-button class="button-default nav-top-right-button mr-40">
         <mat-icon class="icon-display">settings</mat-icon>
       </a>
-      <a mat-button [matMenuTriggerFor]="userName" class="nav-top-right-button">
+      <a
+        mat-button
+        [matMenuTriggerFor]="userName"
+        class="username nav-top-right-button"
+      >
         {{ name }}
         <mat-icon class="mat-icon material-icons" role="img" aria-hidden="true"
           >keyboard_arrow_down</mat-icon
