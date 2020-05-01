@@ -1,63 +1,27 @@
-
-
 <div class="wallet_box">
   <div class="wallet-items">
-  <div class="wallet_content">
-    <h4 title="{{lblName}}">{{lblName}}</h4>
-    <h3>{{ lblAmount | indianCurrency }}</h3>
-  </div>
+    <div class="wallet_content">
+      <h4 title="{{ wallet.name }}">{{ wallet.name }}</h4>
+      <h3>{{ wallet.amount | indianCurrency }}</h3>
+    </div>
     <div class="wallet-icons">
-   <a href="#">   <mat-icon class="icon-display">create</mat-icon></a>
-      <a href="#"><mat-icon class="icon-display">delete</mat-icon></a>
-      <a href="#">  <mat-icon class="icon-display">speaker_notes</mat-icon></a>
+      <a (click)="openEditWallet(wallet)">
+        <mat-icon class="icon-display">create</mat-icon></a
+      >
+      <a (click)="deleteWallet(wallet)"
+        ><mat-icon class="icon-display">delete</mat-icon></a
+      >
+      <a> <mat-icon class="icon-display">speaker_notes</mat-icon></a>
     </div>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- <div class="wallet-title">
   <h4>Wallets</h4>
 </div>
 <div class="wallet-total">
   <section class="wallet-section">
-    
+
     <div class="wallet-card">
       <div class="card-section">
         <div>
@@ -67,21 +31,21 @@
           <h6>₹ 8,500</h6>
         </div>
       </div>
-     
-      
+
+
     </div>
   </section>
 
- 
+
 </div> -->
-<!-- 
+<!--
  <section class="wallet_section">
   <div class="wallet_card">
     <div>
         <h4>Wallets</h4>
     </div>
     <div class="card_section">
-      
+
         <div>
             <h5>CASH</h5>
         </div>
@@ -99,7 +63,7 @@
 
 
 
-    
+
 
       <div>
         <h3>Wallets</h3>

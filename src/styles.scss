@@ -103,15 +103,15 @@ body {
   background-color: $light-primary-text;
 }
 
-.eliya_content{
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 100%;
-  .left_content{
+.eliya_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  .left_content {
     width: 100%;
     max-width: calc(73% - 40px);
-    h3{
+    h3 {
       color: #253a4b;
       font-size: 48px;
       font-family: Arial, Helvetica, sans-serif;
@@ -119,17 +119,17 @@ body {
       margin: 0px;
       margin: 10px 0px 40px 40px;
       opacity: 0.6;
-      span{
+      span {
         color: #253a4b;
-    font-size: 48px;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: left;
-    font-weight: normal;
-    opacity: 0.5;
+        font-size: 48px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        font-weight: normal;
+        opacity: 0.5;
       }
-      }
+    }
   }
-  .right_content{
+  .right_content {
     width: 100%;
     max-width: 27%;
     height: calc(100vh - 121px);
@@ -137,4 +137,24 @@ body {
     border-top-left-radius: 30px;
     margin: 0 0 0 40px;
   }
+}
+.mat-flat-button.btn-rounded {
+  height: 32px;
+  border: none;
+  border-radius: 33px !important;
+  font-family: "Montserrat" !important;
+  font-size: 1em !important;
+  cursor: pointer;
+  outline: none;
+  min-width: 100px;
+  padding: 0 24px;
+  line-height: 32px;
+}
+.mat-dialog-container {
+  border-top: 10px solid #ff1744;
+  border-radius: 3px;
+}
+.mat-dialog-title {
+  color: rgba(37, 58, 75, 0.6);
+  text-align: center;
 }

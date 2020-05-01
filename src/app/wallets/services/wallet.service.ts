@@ -2,9 +2,10 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
+import { Wallet } from '../models/wallet-dto';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WalletService {
   walletApiUri: string = environment.baseUrl + '/wallets';
@@ -19,6 +20,16 @@ export class WalletService {
   }
 
   getWallets() {
-    return this.http.get(this.walletApiUri, this.httpOptions);
+    return this.http.get(
+      this.walletApiUri + '?isActive=true',
+      this.httpOptions
+    );
+  }
+  updateWallet(wallet: any) {
+    return this.http.put(
+      this.walletApiUri + '/' + wallet._id,
+      wallet,
+      this.httpOptions
+    );
   }
 }

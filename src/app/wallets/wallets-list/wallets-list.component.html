@@ -1,13 +1,15 @@
+<section class="eliya_content">
+  <div class="left_content">
+    <h3>Wallets</h3>
+    <span *ngFor="let wallet of walletsList">
+      <app-wallets-card
+        [wallet]="wallet"
+        (isDelete)="isDelete($event)"
+      ></app-wallets-card>
+    </span>
+  </div>
 
-  <section class="eliya_content">
-    <div class="left_content">
-        <h3>Wallets</h3>
-        <span *ngFor="let wallet of walletsList">
-          <app-wallets-card [amount]="wallet.amount" [name]="wallet.name"></app-wallets-card>
-        </span>
-    </div>
-    
   <div class="right_content">
     <app-add-wallet></app-add-wallet>
   </div>
-  </section>
+</section>

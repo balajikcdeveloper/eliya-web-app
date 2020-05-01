@@ -1,54 +1,53 @@
-.add-box{
-    width: 100%;
-    height: 120%;
-     border-radius: 30px;
-     background-color: #F2F2F2;
-     
-     h4{
-         font-family: 'Montserrat';
-         font-size: 18px;
-         color: #253A4B;
-         font-weight: bold;
-          padding: 60px 0 0 58px;
-     }
-     .form-box{
-         width: 80%;
-         height: 50%;
-         background-color: white;
-         margin: 30px 57px 0px 58px;
-         border-radius: 30px;
-         .form-field{
-         .txt{
-            padding: 60px 30px 0px 30px;
-         .textbox {
-             width: 97%;
-       
-         }
-         ::ng-deep
-       .mat-focused
-       .mat-form-field-underline
-       .mat-form-field-ripple {
-       background-color: #f23b52 !important;
-     }
-     ::ng-deep input.mat-input-element {
-         color: yellow;
-       }
-         }
-         }
-         .right-button{
-             width: 60%;
-             height: 9%;
-             background-color: #F23B52;
-             color: white;
-             font-family: 'Montserrat';
-             font-size: 18px;
-             border-radius: 30px;
-             border: none;
-             font-weight: bold;
-             margin:94px 85px 60px  85px;
-             cursor: pointer;
-             outline: none;
-         }
-     }
-     
- }
+@import "../../../theme/app-mat-theme.scss";
+.add-box {
+  width: 100%;
+  height: 120%;
+  border-radius: 30px;
+  background-color: #f2f2f2;
+
+  h4 {
+    font-family: "Montserrat";
+    font-size: 18px;
+    color: #253a4b;
+    font-weight: bold;
+    padding: 60px 0 0 58px;
+  }
+  .form-box {
+    width: 80%;
+    height: 50%;
+    background-color: white;
+    margin: 30px 57px 0px 58px;
+    border-radius: 30px;
+    .form-field {
+      .txt {
+        padding: 60px 30px 0px 30px;
+        .textbox {
+          width: 97%;
+        }
+        ::ng-deep
+          .mat-focused
+          .mat-form-field-underline
+          .mat-form-field-ripple {
+          background-color: #f23b52 !important;
+        }
+        ::ng-deep input.mat-input-element {
+          color: #4d4f5c;
+        }
+      }
+    }
+    .right-button {
+      width: 60%;
+      height: 9%;
+      background-color: #f23b52;
+      color: white;
+      font-family: "Montserrat";
+      font-size: 18px;
+      border-radius: 30px;
+      border: none;
+      font-weight: bold;
+      margin: 94px 85px 60px 85px;
+      cursor: pointer;
+      outline: none;
+    }
+  }
+}

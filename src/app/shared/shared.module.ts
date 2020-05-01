@@ -10,6 +10,12 @@ import { WalletsCardComponent } from './components/wallets-card/wallets-card.com
 import { from } from 'rxjs';
 import { CategoryCardComponent } from './components/category-card/category-card.component';
 import { IndianCurrencyPipe } from './pipes/indian-currency.pipe';
+import {
+  Location,
+  LocationStrategy,
+  PathLocationStrategy,
+} from '@angular/common';
+import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +23,7 @@ import { IndianCurrencyPipe } from './pipes/indian-currency.pipe';
     WalletsCardComponent,
     CategoryCardComponent,
     IndianCurrencyPipe,
+    ConfirmationDialogComponent,
   ],
   imports: [CommonModule, MaterialModule, SharedRoutingModule],
   exports: [
@@ -25,7 +32,13 @@ import { IndianCurrencyPipe } from './pipes/indian-currency.pipe';
     CategoryCardComponent,
     IndianCurrencyPipe,
   ],
-  providers: [NotificationService, CommonService],
+  providers: [
+    NotificationService,
+    CommonService,
+    Location,
+    { provide: LocationStrategy, useClass: PathLocationStrategy },
+  ],
+  entryComponents: [ConfirmationDialogComponent],
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {

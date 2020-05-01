@@ -1,24 +1,28 @@
 <div class="add-box">
-    <h4>Add Wallet</h4>
-    <div class="form-box">
-      <form class="form-field">
-        <div class="txt">
+  <h4>Add Wallet</h4>
+  <div class="form-box">
+    <form class="form-field">
+      <div class="txt">
         <mat-form-field class="textbox">
           <mat-label>name</mat-label>
-          <input matInput type="text" name="name" >
+          <input matInput type="text" name="name" />
         </mat-form-field>
         <mat-form-field class="textbox">
           <mat-label>amount</mat-label>
-          <input matInput type="text" name="amount">
+          <input matInput type="number" name="amount" />
         </mat-form-field>
-        <mat-form-field class="textbox" >
+        <mat-form-field class="textbox">
           <mat-label>notes</mat-label>
-          <textarea matInput type="textarea" name="notes"  style="height: 75px;" ></textarea>
+          <textarea
+            matInput
+            type="textarea"
+            name="notes"
+            style="height: 75px;"
+          ></textarea>
         </mat-form-field>
       </div>
-      </form>
-    
+    </form>
+
     <button mat-flat-button class="right-button">SAVE</button>
-    
-    </div>
-      </div>
+  </div>
+</div>

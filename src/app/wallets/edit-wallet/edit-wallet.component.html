@@ -1,0 +1,52 @@
+<h2 mat-dialog-title>Edit Expense</h2>
+<mat-dialog-content>
+  <div class="form-box">
+    <form class="form-field">
+      <div class="txt">
+        <mat-form-field class="textbox">
+          <mat-label>name</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="walletList.name"
+            name="name"
+          />
+        </mat-form-field>
+
+        <mat-form-field class="textbox">
+          <mat-label>amount</mat-label>
+          <input
+            matInput
+            type="text"
+            [(ngModel)]="walletList.amount"
+            name="amount"
+          />
+        </mat-form-field>
+        <mat-form-field class="textbox">
+          <mat-label>notes</mat-label>
+          <textarea
+            matInput
+            type="textarea"
+            [(ngModel)]="walletList.description"
+            name="description"
+            style="height: 75px;"
+          ></textarea>
+        </mat-form-field>
+      </div>
+    </form>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-flat-button mat-dialog-close class="btn-rounded" color="accent">
+    Cancel
+  </button>
+  <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+  <button
+    mat-flat-button
+    (click)="updateWallet(walletList)"
+    class="btn-rounded"
+    color="primary"
+  >
+    Save
+  </button>
+</mat-dialog-actions>
