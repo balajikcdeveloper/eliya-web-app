@@ -5,6 +5,7 @@ import { Wallet } from '../../../wallets/models/wallet-dto';
 import { Router } from '@angular/router';
 import { WalletService } from '../../../wallets/services/wallet.service';
 import { NotificationService } from '../../services/general/notification.service';
+import { HttpStatusCode } from '../../../constents/http-status-code';
 import {
   Location,
   LocationStrategy,
@@ -37,13 +38,14 @@ export class WalletsCardComponent implements OnInit {
       data: { wallet },
     });
     dialogRef.afterClosed().subscribe((wallet: any) => {
-      if (wallet) this.wallet = wallet;
+      if (wallet) {
+        this.wallet = wallet;
+      }
     });
   }
   deleteWallet(wallet) {
-    wallet.isActive = false;
-    this.walletService.updateWallet(wallet).subscribe((res: any) => {
-      if (res.status) {
+    this.walletService.deleteWallet(wallet).subscribe((res: any) => {
+      if (res.status == HttpStatusCode.OK) {
         this.notificationService.showSuccessMessage(
           'Wallet deleted succesfully'
         );

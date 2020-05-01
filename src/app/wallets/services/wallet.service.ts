@@ -25,10 +25,20 @@ export class WalletService {
       this.httpOptions
     );
   }
+
+  addWallet(wallet) {
+    return this.http.post(this.walletApiUri, wallet, this.httpOptions);
+  }
   updateWallet(wallet: any) {
     return this.http.put(
       this.walletApiUri + '/' + wallet._id,
       wallet,
+      this.httpOptions
+    );
+  }
+  deleteWallet(wallet: any) {
+    return this.http.delete(
+      this.walletApiUri + '/' + wallet._id,
       this.httpOptions
     );
   }

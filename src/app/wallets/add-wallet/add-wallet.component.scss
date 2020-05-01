@@ -18,6 +18,7 @@
     background-color: white;
     margin: 30px 57px 0px 58px;
     border-radius: 30px;
+    text-align: center;
     .form-field {
       .txt {
         padding: 60px 30px 0px 30px;
@@ -34,20 +35,6 @@
           color: #4d4f5c;
         }
       }
-    }
-    .right-button {
-      width: 60%;
-      height: 9%;
-      background-color: #f23b52;
-      color: white;
-      font-family: "Montserrat";
-      font-size: 18px;
-      border-radius: 30px;
-      border: none;
-      font-weight: bold;
-      margin: 94px 85px 60px 85px;
-      cursor: pointer;
-      outline: none;
     }
   }
 }

@@ -27,6 +27,11 @@ export class WalletsListComponent implements OnInit {
       this.getWalletsList();
     }
   }
+  isAdd(isAddStatus: boolean) {
+    if (isAddStatus) {
+      this.getWalletsList();
+    }
+  }
   getWalletsList() {
     this.walletService.getWallets().subscribe(
       (result: any) => {
