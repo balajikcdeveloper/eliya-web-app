@@ -22,9 +22,8 @@ export class AppGuard implements CanActivate {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    // return this.authService.isAuthenticated()
-    //   ? true
-    //   : this.router.parseUrl('/login/auth');
-    return true;
+    return this.authService.isAuthenticated()
+      ? true
+      : this.router.parseUrl('/login/auth');
   }
 }
