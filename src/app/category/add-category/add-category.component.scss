@@ -1,0 +1,148 @@
+
+    .add-category_bg{
+        background-color: #f2f2f2;
+        border-top-left-radius: 30px;
+        height: auto;
+    .add-category{
+        display: flex;
+        align-self: flex-end;
+        width: 75%;
+         border-radius: 30px;
+         background-color: #F2F2F2;
+         h4{
+             font-family: 'Montserrat';
+             font-size: 18px;
+             color: #253A4B;
+             font-weight: bold;
+              padding: 60px 0px 0px 48px;
+         }
+         
+         
+     }
+     .form-box{
+         
+        width:calc(75% - 60px);
+        background-color: white;
+        border-radius: 30px;
+        margin: 0px auto;
+        padding: 0px 30px 38px 30px;
+        .form-field{
+        .txt{
+        .textbox {
+            border-radius: 30px;
+            margin: 30px 0px 40px 0px;
+        }
+        ::ng-deep
+      .mat-focused
+      .mat-form-field-underline
+      .mat-form-field-ripple {
+      background-color: #f23b52 !important;
+    }
+    ::ng-deep input.mat-input-element {
+        color: yellow;
+      }
+        }
+        }
+        .button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            margin: 0px auto;
+            .right-button{
+                background-color: #F23B52;
+                color: white;
+                border-radius: 30px;
+                border: none;
+                font-weight: bold;
+                cursor: pointer;
+                outline: none;
+                padding: 10px 75px;
+                margin-bottom: 30px;
+                a{
+                    font-size: 18px;
+                    font-family: 'Montserrat';
+                    text-decoration: none;
+                }
+            }
+        }
+        
+    }
+    .budjet_section {
+        width: 100%;
+        .activity_section{
+            padding-bottom: 55px;
+            p{
+                font-size: 18px;
+                font-family: 'Montserrat';
+                padding-top: 60px;
+                margin-left: 48px;
+            }
+        .activity_content {
+          position: relative;
+          background-color: #fff;
+          width: 80%;
+          margin: 0px auto;
+          border-radius: 30px;
+          padding-top: 40px;
+          padding-bottom: 40px;
+          .icon_content {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+      
+            .icon_background {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 40px;
+              height: 40px;
+              border-radius: 100%;
+              background-color: #f4f5f6;
+              margin: 0 10%;
+              opacity: 0.5;
+            }
+            .activiy_list_items {
+              width: calc(80% - 40px);
+              h3 {
+                color: rgb(0, 0, 0);
+                font-size: 12px;
+                font-weight: bold;
+                font-family: 'Montserrat';
+                padding: 0px;
+                margin: 0px;
+                white-space: nowrap;
+               width: 75%;
+              }
+              p {
+                color: #f23b52;
+                font-size: 12px;
+                font-family: 'Montserrat';
+                margin: 0px;
+                padding: 0px;
+              }
+            }
+          }
+          .button {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            a {
+              color: #fff;
+              font-size: 14px;
+              font-family: 'Montserrat';
+              font-weight: bold;
+              text-decoration: none;
+              background-color: #f23b52;
+              padding: 10px 70px;
+              border-radius: 30px;
+              margin-top: 30px;
+            }
+          }
+        }
+      }
+    }
+      
+    
+}
