@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ErrorPageComponent } from './shared/components/micro/error-page.component';
+import { AppGuard } from './layout/app.guard';
 
 const routes: Routes = [
   {
@@ -15,6 +16,7 @@ const routes: Routes = [
   },
   {
     path: 'app',
+    canActivate: [AppGuard],
     loadChildren: () =>
       import('../app/layout/layout.module').then(
         (module) => module.LayoutModule

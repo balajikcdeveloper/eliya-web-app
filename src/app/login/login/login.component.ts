@@ -24,9 +24,10 @@ export class LoginComponent implements OnInit {
   ngOnInit() {}
   loginCheck(user: Login) {
     this.authService.loginUser(user).subscribe(
-      (result) => {
+      (result: any) => {
         if (result && result.token) {
           this.authService.setToken(result.token);
+          this.cookieService.set('name', result.data.name);
           console.log(result);
           this.router.navigateByUrl('/app/home');
         }
