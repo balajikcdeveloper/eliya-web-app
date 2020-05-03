@@ -8,42 +8,42 @@ import { EditCategoryComponent } from 'src/app/category/edit-category/edit-categ
 @Component({
   selector: 'app-category-card',
   templateUrl: './category-card.component.html',
-  styleUrls: ['./category-card.component.scss']
+  styleUrls: ['./category-card.component.scss'],
 })
 export class CategoryCardComponent implements OnInit {
   @Output() isDelete = new EventEmitter<boolean>();
   @Input()
   category: {
     name: string;
+    icon: string;
     isActive: boolean;
   };
   constructor(
-    public dialog:MatDialog,
+    public dialog: MatDialog,
     private categoryService: CategoryService,
-    private notficationService : NotificationService
-  ) { }
+    private notficationService: NotificationService
+  ) {}
 
   ngOnInit(): void {}
-  openEditCategory(category){
-    const dialogRef = this.dialog.open(EditCategoryComponent,{
+  openEditCategory(category) {
+    const dialogRef = this.dialog.open(EditCategoryComponent, {
       width: '400px',
-      data: {category},
+      data: { category },
     });
-    dialogRef.afterClosed().subscribe((category: any) =>{
-      if(category){
+    dialogRef.afterClosed().subscribe((category: any) => {
+      if (category) {
         this.category = category;
       }
     });
   }
-  deleteCategory(category){
-    this.categoryService.deleteCategory(category).subscribe((res:any)=>{
-if(res.status == HttpStatusCode.OK){
-  this.notficationService.showSuccessMessage(
-    'Category Deleted Sucessfully'
-  );
-  this.isDelete.emit(true);
-}
+  deleteCategory(category) {
+    this.categoryService.deleteCategory(category).subscribe((res: any) => {
+      if (res.status == HttpStatusCode.OK) {
+        this.notficationService.showSuccessMessage(
+          'Category Deleted Sucessfully'
+        );
+        this.isDelete.emit(true);
+      }
     });
   }
-
 }
