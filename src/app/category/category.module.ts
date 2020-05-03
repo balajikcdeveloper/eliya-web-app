@@ -9,11 +9,12 @@ import { MaterialModule } from '../shared/material.module';
 import { SharedModule } from '../shared/shared.module';
 import { EditCategoryComponent } from './edit-category/edit-category.component';
 import { CategoryService } from './services/category.service';
+import { CategoryIconComponent } from './category-icon/category-icon.component';
 
 
 
 @NgModule({
-  declarations: [AddCategoryComponent, CategoryListComponent, EditCategoryComponent],
+  declarations: [AddCategoryComponent, CategoryListComponent, EditCategoryComponent, CategoryIconComponent],
   imports: [CommonModule,FormsModule, MaterialModule, SharedModule,CategoryRoutingModule ],
   exports:[CategoryListComponent,AddCategoryComponent],
   providers:[CategoryService],
