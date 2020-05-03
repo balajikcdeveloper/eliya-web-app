@@ -1,7 +1,3 @@
-
-
-     
-      
             <div class="add-category_bg">
           <div class="add-category">
               <h4>Add Category</h4>
@@ -11,19 +7,21 @@
                 <div class="txt">
                 <mat-form-field class="textbox">
                   <mat-label>name</mat-label>
-                  <input matInput type="text" name="name" >
+                  <input matInput type="text" 
+                  [(ngModel)]="categoryList.name"
+                  name="name" >
                 </mat-form-field>
               
               </div>
               </form>
               <div class="button">
-                  <a href="#"> <button
+                 <button
                     mat-flat-button
                     class="btn-rounded"
                     color="primary"
-                  >
+                    (click) = "addCategory(categoryList)">
                     SAVE
-                  </button></a>
+                  </button>
                  </div>
               </div>
               <div class="budjet_section">

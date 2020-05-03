@@ -6,11 +6,11 @@
             <div class="category-content">
               <div class="icon-holder">
                 <mat-icon class="icon-cat">movie</mat-icon>
-                <h4>Movie</h4>
+                <h4 title="{{category.name}}">{{ category.name}}</h4>
               </div>
             <div class="icon-visibility">
-            <a href="#"><mat-icon class="icon-display">create</mat-icon></a>
-            <a href="#"><mat-icon class="icon-display">delete</mat-icon></a></div>
+            <a (click)="openEditCategory(category)"><mat-icon class="icon-display">create</mat-icon></a>
+            <a  (click)="deleteCategory(category)"><mat-icon class="icon-display">delete</mat-icon></a></div>
             </div>
             
             </div>

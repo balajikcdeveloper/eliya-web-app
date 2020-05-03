@@ -2,11 +2,14 @@
   <section class="eliya_content">
     <div class="left_content">
         <h3>Categories</h3>
-<app-category-card></app-category-card>
-
+        <span *ngFor="let category of categoryList">
+<app-category-card [category]="category"
+(isDelete)="isDelete($event)">
+</app-category-card>
+</span>
 </div>
 
 <div class="right_content">
-<app-add-category></app-add-category>
+<app-add-category (isAdd)="isAdd($event)"></app-add-category>
 </div>
 </section>

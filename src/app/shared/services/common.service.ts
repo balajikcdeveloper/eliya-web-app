@@ -10,6 +10,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class CommonService {
   walletApiUri: string = environment.baseUrl + '/wallets';
+  categoryApiUri: string = environment.baseUrl + '/categories';
   httpOptions: any;
   constructor(private http: HttpClient, private authService: AuthService) {
     this.httpOptions = {
@@ -22,5 +23,8 @@ export class CommonService {
 
   getWallets() {
     return this.http.get(this.walletApiUri, this.httpOptions);
+  }
+  getCategory() {
+    return this.http.get(this.categoryApiUri, this.httpOptions);
   }
 }

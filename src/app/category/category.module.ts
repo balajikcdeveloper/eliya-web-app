@@ -7,12 +7,16 @@ import { CategoryListComponent } from './category-list/category-list.component';
 import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../shared/material.module';
 import { SharedModule } from '../shared/shared.module';
+import { EditCategoryComponent } from './edit-category/edit-category.component';
+import { CategoryService } from './services/category.service';
 
 
 
 @NgModule({
-  declarations: [AddCategoryComponent, CategoryListComponent],
+  declarations: [AddCategoryComponent, CategoryListComponent, EditCategoryComponent],
   imports: [CommonModule,FormsModule, MaterialModule, SharedModule,CategoryRoutingModule ],
-  exports:[CategoryListComponent,AddCategoryComponent]
+  exports:[CategoryListComponent,AddCategoryComponent],
+  providers:[CategoryService],
+  entryComponents: [EditCategoryComponent],
 })
 export class CategoryModule { }
