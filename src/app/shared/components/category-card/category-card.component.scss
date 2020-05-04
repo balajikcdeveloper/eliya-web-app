@@ -1,4 +1,8 @@
 .category-box {
+  display: inline;
+  justify-content: space-between;
+
+
   h3 {
     color: #253A4B;
     font-size: 48px;
@@ -8,17 +12,20 @@
   }
 
   .category-items {
-    position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 7%;
-    background-color: #F4F5F6;
+    justify-content: center;
+    width: 10%;
+    background-color: rgb(238, 238, 238);
     border-radius: 30px;
     padding: 28.5px 30px;
     margin-top: 62px;
+    float: left;
     margin-left: 48px;
+    transition: background-color 0.6s ease;
     cursor: pointer;
+
+    text-align: center;
 
     .category-content {
       display: flex;
@@ -27,33 +34,37 @@
       align-items: space-between;
       cursor: pointer;
 
-.icon-holder{
-  .mat-icon.icon-cat {
-      width: 100%;
-      font-size: 5em;
-      text-align: center;
-    color: #F23B52;
-    font-size: 5em;
-  }
+      .icon-holder {
+        .mat-icon.icon-cat {
+          width: 100%;
+          font-size: 5em;
+          text-align: center;
+          color: #F23B52;
+          font-size: 5em;
+        }
 
-  h4 {
-    color: #253A4B;
-    font-size: 18px;
-    font-family: 'Montserrat';
-    margin: unset;
-    text-align: center;
-    font-weight: bold;
-  }
-}
-      
-
-
-
-      .icon-visibility{
-          display: none;
-          justify-content: space-between;
+        h4 {
+          color: #253A4B;
+          font-size: 18px;
+          font-family: 'Montserrat';
+          margin: unset;
+          margin-top: 3px;
+          text-align: center;
+          font-weight: bold;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          white-space: nowrap;
+        }
       }
-    
+
+
+
+
+      .icon-visibility {
+        display: none;
+        justify-content: space-between;
+      }
+
     }
 
 
@@ -65,88 +76,60 @@
       cursor: pointer;
 
       .icon-display {
-          display: flex;
-          justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
+        font-size: 3em;
         color: rgb(165, 165, 165);
       }
     }
-    &:hover {
-    
-        background-color: #F23B52;
-        color: #fff;
-  
-        .category-content {
-          .icon-holder{
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              .mat-icon.icon-cat {
-            
-                  display: flex;
-                  justify-content: space-between;
-                color: #fff !important;
-                font-size: 2em;
-              }
-              h4{
-                  font-size: 18px;
-                  color: #fff;
-                  font-weight: bold;
-                  margin-top: 3px;
-                  margin-left: 10px;
-              }
-          }
-      
-          .icon-visibility{
-              display: flex;
-              color:#fff;
-              flex-direction: row;
-              justify-content: space-between;
-              margin-top: 40px;
 
+    &:hover {
+
+      background-color: #F23B52;
+      color: #fff;
+
+      .category-content {
+        .icon-holder {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .mat-icon.icon-cat {
+
+            display: flex;
+            color: #fff !important;
+            font-size: 2em;
           }
-          .icon-display{
-            color: white;
-            font-size: 29px;
+
+          h4 {
+            font-size: 18px;
+            color: #fff;
+            margin-top: 3px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+
+            width: 272px;
           }
         }
-     
+
+        .icon-visibility {
+          display: flex;
+          color: #fff;
+          flex-direction: row;
+          justify-content: space-between;
+          margin-top: 40px;
+
+          .icon-display {
+            font-size: 2.2em;
+          }
+        }
+      }
+
     }
-    // &.categoryt-items:hover{
 
-    //     background-color: #F23B52;
-
-    //     h4,
-    //     h3,
-    //     .icon-display{
-    //         color:#fff;
-    //     }
-    // }
 
   }
 
-  
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

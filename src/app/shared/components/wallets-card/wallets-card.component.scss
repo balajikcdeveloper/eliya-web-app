@@ -62,7 +62,7 @@
 
 &.wallet-items:hover{
     background-color: #F23B52;
-  
+    transition: background-color 0.5s ease;
   h4,h3,  .icon-display{
         color:#fff;
     }

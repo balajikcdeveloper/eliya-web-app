@@ -1,4 +1,5 @@
 <div class="category-box">
+
   <div class="category-items">
     <div class="category-content">
       <div class="icon-holder">
@@ -6,13 +7,15 @@
         <h4 title="{{ category.name }}">{{ category.name }}</h4>
       </div>
       <div class="icon-visibility">
-        <a (click)="openEditCategory(category)"
-          ><mat-icon class="icon-display">create</mat-icon></a
-        >
-        <a (click)="deleteCategory(category)"
-          ><mat-icon class="icon-display">delete</mat-icon></a
-        >
+        <a (click)="openEditCategory(category)">
+          <mat-icon class="icon-display">create</mat-icon>
+        </a>
+        <a (click)="deleteCategory(category)">
+          <mat-icon class="icon-display">delete</mat-icon>
+        </a>
       </div>
     </div>
   </div>
+
+
 </div>
