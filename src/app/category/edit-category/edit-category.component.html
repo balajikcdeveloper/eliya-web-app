@@ -12,10 +12,25 @@
             name="name"
           />
         </mat-form-field>
-
       
+    
+  
+      <mat-form-field class="mt-20">
+        <mat-label>icon</mat-label>
+        <input
+          matInput
+          disabled
+          (click)="updateIcon() "
+          type="text"
+          [(ngModel)]="categoryList.icon"
+          name="icon"
+        />
+        <mat-icon class="cursor-link" (click)="updateIcon() " matSuffix
+          >insert_emoticon</mat-icon>
+      </mat-form-field>
       </div>
-    </form>
+      </form>
+    
   </div>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
