@@ -2,11 +2,10 @@
   display: inline;
   justify-content: space-between;
 
-
   h3 {
-    color: #253A4B;
+    color: #253a4b;
     font-size: 48px;
-    font-family: 'Montserrat';
+    font-family: "Montserrat";
     opacity: 0.5;
     margin-left: 48px;
   }
@@ -39,14 +38,14 @@
           width: 100%;
           font-size: 5em;
           text-align: center;
-          color: #F23B52;
+          color: #f23b52;
           font-size: 5em;
         }
 
         h4 {
-          color: #253A4B;
+          color: #253a4b;
           font-size: 18px;
-          font-family: 'Montserrat';
+          font-family: "Montserrat";
           margin: unset;
           margin-top: 3px;
           text-align: center;
@@ -57,16 +56,11 @@
         }
       }
 
-
-
-
       .icon-visibility {
         display: none;
         justify-content: space-between;
       }
-
     }
-
 
     .category-icons {
       display: flex;
@@ -84,8 +78,7 @@
     }
 
     &:hover {
-
-      background-color: #F23B52;
+      background-color: #f23b52;
       color: #fff;
 
       .category-content {
@@ -95,10 +88,11 @@
           align-items: center;
 
           .mat-icon.icon-cat {
-
             display: flex;
             color: #fff !important;
-            font-size: 2em;
+            animation: icon-animation 0.2s 1 0s linear;
+            animation-fill-mode: forwards;
+            transition: ease-in;
           }
 
           h4 {
@@ -125,11 +119,14 @@
           }
         }
       }
-
     }
-
-
   }
-
-
+}
+@keyframes icon-animation {
+  0% {
+    font-size: 5em;
+  }
+  100% {
+    font-size: 2em;
+  }
 }
