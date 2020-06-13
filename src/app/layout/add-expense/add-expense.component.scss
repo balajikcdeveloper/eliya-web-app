@@ -1,0 +1,56 @@
+@import "../../../theme/app-mat-theme.scss";
+h4 {
+  font-family: "Montserrat";
+  font-size: 18px;
+  color: #253a4b;
+  font-weight: bold;
+}
+.form-box {
+  width: 100%;
+  background-color: white;
+  border-radius: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+  .form-field {
+    .txt {
+      padding: 30px;
+      .textbox {
+        width: 97%;
+      }
+      ::ng-deep .mat-focused .mat-form-field-underline .mat-form-field-ripple {
+        background-color: #f23b52 !important;
+      }
+      ::ng-deep input.mat-input-element {
+        color: #4d4f5c;
+      }
+    }
+  }
+}
+ul.category-wrap {
+  width: 100%;
+  float: left;
+  margin: 20px 0;
+  padding: 0 20px;
+  li {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: #f4f5f6;
+    margin: 0 10px;
+    opacity: 0.5;
+    float: left;
+    list-style: none;
+    mat-icon {
+      margin: 8px 0 0;
+      color: #f23b52;
+    }
+    &:hover {
+      opacity: 1;
+      background-color: #f23b52;
+      mat-icon {
+        color: #fff;
+      }
+    }
+  }
+}

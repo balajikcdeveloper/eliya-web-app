@@ -8,19 +8,25 @@ import { SidenavComponent } from './sidenav/sidenav.component';
 import { MaterialModule } from '../shared/material.module';
 import { SharedModule } from '../shared/shared.module';
 import { WalletsModule } from '../wallets/wallets.module';
-
-
+import { FormsModule } from '@angular/forms';
+import { AddExpenseComponent } from './add-expense/add-expense.component';
 
 @NgModule({
-  declarations: [LayoutComponent, HeaderComponent, SidenavComponent],
+  declarations: [
+    LayoutComponent,
+    HeaderComponent,
+    SidenavComponent,
+    AddExpenseComponent,
+  ],
   imports: [
     CommonModule,
+    FormsModule,
     MaterialModule,
     FlexLayoutModule,
     WalletsModule,
     LayoutRoutingModule,
-    SharedModule
+    SharedModule,
   ],
-  exports: [HeaderComponent,SidenavComponent]
+  exports: [HeaderComponent, SidenavComponent, AddExpenseComponent],
 })
-export class LayoutModule { }
+export class LayoutModule {}

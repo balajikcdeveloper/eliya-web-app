@@ -26,8 +26,10 @@ export class LoginComponent implements OnInit {
     this.authService.loginUser(user).subscribe(
       (result: any) => {
         if (result && result.token) {
+          this.authService.removeToken();
           this.authService.setToken(result.token);
           this.cookieService.set('name', result.data.name);
+          this.cookieService.set('userId', result.data._id);
           console.log(result);
           this.router.navigateByUrl('/app/home');
         }

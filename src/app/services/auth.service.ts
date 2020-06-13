@@ -25,6 +25,7 @@ export class AuthService {
   removeToken() {
     this.cookieService.delete('token');
     this.cookieService.delete('name');
+    this.cookieService.delete('userId');
   }
   public isAuthenticated(): boolean {
     return this.checkToken();

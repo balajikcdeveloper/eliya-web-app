@@ -1,0 +1,60 @@
+<h4>Add</h4>
+<mat-tab-group>
+  <mat-tab label="Expense">
+    <div class="form-box">
+      <form class="form-field">
+        <div class="txt">
+          <mat-form-field class="textbox">
+            <mat-label>amount</mat-label>
+            <input
+              matInput
+              type="number"
+              [(ngModel)]="expenseList.amount"
+              name="amount"
+            />
+          </mat-form-field>
+          <mat-form-field class="textbox">
+            <mat-label>Wallet</mat-label>
+            <mat-select>
+              <mat-option
+                *ngFor="let wallet of walletList"
+                [value]="wallet._id"
+              >
+                {{ wallet.name }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div class="textbox">
+            <mat-label>Category</mat-label>
+            <ul class="category-wrap">
+              <li *ngFor="let category of categoryList">
+                <mat-icon>{{ category.icon }}</mat-icon>
+              </li>
+            </ul>
+          </div>
+          <mat-form-field class="textbox">
+            <mat-label>description</mat-label>
+            <textarea
+              matInput
+              type="textarea"
+              [(ngModel)]="expenseList.description"
+              name="description"
+              style="height: 75px;"
+            ></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+
+      <button
+        mat-flat-button
+        (click)="addExpense(expenseList)"
+        class="btn-rounded"
+        color="primary"
+      >
+        Save
+      </button>
+    </div>
+  </mat-tab>
+  <mat-tab label="Income"> Content 2 </mat-tab>
+  <mat-tab label="Transaction"> Content 3 </mat-tab>
+</mat-tab-group>

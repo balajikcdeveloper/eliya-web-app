@@ -25,7 +25,12 @@
       <img src="../../../assets/logo.png" />
     </div>
     <span class="example-spacer"></span>
-    <button mat-flat-button class="btn-rounded" color="primary">
+    <button
+      mat-flat-button
+      class="btn-rounded"
+      (click)="openAddExpense()"
+      color="primary"
+    >
       Add Expense
     </button>
     <div class="nav-top-right" fxLayout="row" fxLayoutAlign="end center">
