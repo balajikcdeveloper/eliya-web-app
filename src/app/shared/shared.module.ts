@@ -16,6 +16,7 @@ import {
   PathLocationStrategy,
 } from '@angular/common';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
+import { BudgetCardComponent } from './components/budget-card/budget-card.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ConfirmationDialogComponent } from './components/confirmation-dialog/co
     CategoryCardComponent,
     IndianCurrencyPipe,
     ConfirmationDialogComponent,
+    BudgetCardComponent,
   ],
   imports: [CommonModule, MaterialModule, SharedRoutingModule],
   exports: [
@@ -31,6 +33,7 @@ import { ConfirmationDialogComponent } from './components/confirmation-dialog/co
     WalletsCardComponent,
     CategoryCardComponent,
     IndianCurrencyPipe,
+    BudgetCardComponent
   ],
   providers: [
     NotificationService,

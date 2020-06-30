@@ -1,0 +1,19 @@
+<section class="budget-section">
+   
+    <div class="budget">
+       <div class="budget-box">
+        <mat-icon class="icon-cat">{{ category.icon }}</mat-icon>
+      
+        <h3 title="{{ category.name }}">{{category.name}}</h3>
+        <h4>amount</h4>
+        <div class="icon-holder">
+            <a (click)="openEditBudget(budget)">
+                <mat-icon class="icon-display">create</mat-icon>
+              </a>
+              <a>
+                <mat-icon class="icon-display">delete</mat-icon>
+              </a>
+        </div>
+       </div>    
+    </div>
+</section>
