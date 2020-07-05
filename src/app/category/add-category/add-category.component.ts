@@ -49,8 +49,8 @@ export class AddCategoryComponent implements OnInit {
             'Category created successfully'
           );
           this.isAdd.emit(true);
-          category.name = "";
-          category.icon = undefined;
+          category.name = null;
+          category.icon = null;
         }
       });
     }
