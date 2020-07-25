@@ -19,15 +19,7 @@ export class BudgetListComponent implements OnInit {
     this.categoryService.getCategory().subscribe(
       (result: any) => {
         this.categoryList = result.data;
-    
-      //  for (let i = 0; i < this.categoryList.length ; i++) {
-      //   var item = this.categoryList[i];
-      //  console.log(item);
-    
-      // } 
-  
-  
-      },
+   },
       (error) => {
         this.notificationService.showErrorMessage(
           'User not authenticated! please login.'

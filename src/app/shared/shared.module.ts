@@ -17,6 +17,7 @@ import {
 } from '@angular/common';
 import { ConfirmationDialogComponent } from './components/confirmation-dialog/confirmation-dialog.component';
 import { BudgetCardComponent } from './components/budget-card/budget-card.component';
+import { ConfirmDeleteComponent } from './components/confirm-delete/confirm-delete.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { BudgetCardComponent } from './components/budget-card/budget-card.compon
     IndianCurrencyPipe,
     ConfirmationDialogComponent,
     BudgetCardComponent,
+    ConfirmDeleteComponent,
   ],
   imports: [CommonModule, MaterialModule, SharedRoutingModule],
   exports: [
@@ -33,7 +35,8 @@ import { BudgetCardComponent } from './components/budget-card/budget-card.compon
     WalletsCardComponent,
     CategoryCardComponent,
     IndianCurrencyPipe,
-    BudgetCardComponent
+    BudgetCardComponent,
+    ConfirmDeleteComponent
   ],
   providers: [
     NotificationService,

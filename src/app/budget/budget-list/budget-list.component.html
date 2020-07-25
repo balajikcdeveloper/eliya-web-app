@@ -2,10 +2,11 @@
     <div class="left_content" >
         <h3>Budgets</h3>
         <span *ngFor="let category of categoryList">
+              
 <app-budget-card [category]="category"></app-budget-card>
         </span>
 </div>
- 
+
 <div class="right_content">
 <app-add-budget></app-add-budget>
 </div>

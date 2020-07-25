@@ -8,6 +8,7 @@ import { EditBudgetComponent } from './edit-budget/edit-budget.component';
 import { SharedModule } from '../shared/shared.module';
 import { MaterialModule } from '../shared/material.module';
 import { FormsModule } from '@angular/forms';
+import { BudgetService } from './services/budget.service';
 
 
 
@@ -21,5 +22,6 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
   exports:[AddBudgetComponent,BudgetListComponent],
+  providers:[BudgetService]
 })
 export class BudgetModule { }

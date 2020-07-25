@@ -21,6 +21,14 @@
       .form-field {
         .txt {
           padding: 30px;
+          .mat-icon.icon-cat {
+            width: 100%;
+            font-size: 4em !important;
+            text-align: center;
+            color: #F23B52 ;
+            margin-top: 55px;   
+            
+          }
           .textbox {
             width: 97%;
           }
@@ -37,6 +45,7 @@
       }
     }
   }
+  
   .ng-valid[required], .ng-valid.required{
     border-left: 5px solid green;
   }

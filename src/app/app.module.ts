@@ -19,6 +19,7 @@ import { CookieService } from 'ngx-cookie-service';
     BrowserAnimationsModule,
     LayoutModule,
     LoginModule,
+    
   ],
   providers: [CookieService],
   bootstrap: [AppComponent],

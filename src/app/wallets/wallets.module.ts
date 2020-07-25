@@ -8,6 +8,7 @@ import { MaterialModule } from '../shared/material.module';
 import { FormsModule } from '@angular/forms';
 import { WalletService } from './services/wallet.service';
 import { EditWalletComponent } from './edit-wallet/edit-wallet.component';
+import { CommonService } from '../shared/services/common.service';
 
 @NgModule({
   declarations: [WalletsListComponent, AddWalletComponent, EditWalletComponent],
@@ -19,7 +20,7 @@ import { EditWalletComponent } from './edit-wallet/edit-wallet.component';
     WalletsRoutingModule,
   ],
   exports: [WalletsListComponent, AddWalletComponent],
-  providers: [WalletService],
+  providers: [WalletService,CommonService],
   entryComponents: [EditWalletComponent],
 })
 export class WalletsModule {}

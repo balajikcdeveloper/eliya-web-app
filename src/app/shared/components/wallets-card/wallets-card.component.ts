@@ -11,6 +11,8 @@ import {
   LocationStrategy,
   PathLocationStrategy,
 } from '@angular/common';
+import { ConfirmDeleteComponent } from '../confirm-delete/confirm-delete.component';
+import { CommonService } from '../../services/common.service';
 @Component({
   selector: 'app-wallets-card',
   templateUrl: './wallets-card.component.html',
@@ -28,7 +30,8 @@ export class WalletsCardComponent implements OnInit {
     public dialog: MatDialog,
     private router: Router,
     private walletService: WalletService,
-    private notificationService: NotificationService
+    private notificationService: NotificationService,
+    private commonService:CommonService
   ) {}
 
   ngOnInit(): void {}
@@ -44,13 +47,26 @@ export class WalletsCardComponent implements OnInit {
     });
   }
   deleteWallet(wallet) {
+    const dialogRef = this.dialog.open(ConfirmDeleteComponent,{
+      width:'400px',
+      data:{wallet}
+    });
+
+      this.commonService.subsVar = this.commonService
+      .invokeConfirmComponent.subscribe((flag) =>{
+        if(flag == 1 ){
     this.walletService.deleteWallet(wallet).subscribe((res: any) => {
-      if (res.status == HttpStatusCode.OK) {
+      if (res.status === HttpStatusCode.OK) {
         this.notificationService.showSuccessMessage(
           'Wallet deleted succesfully'
         );
         this.isDelete.emit(true);
+        this.dialog.closeAll();
+        location.reload();
       }
     });
+  }
+  })
+
   }
 }

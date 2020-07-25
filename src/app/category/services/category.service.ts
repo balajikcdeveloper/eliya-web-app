@@ -5,13 +5,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { AuthService } from 'src/app/services/auth.service';
 import { Category } from '../models/category-dto';
 import { from } from 'rxjs';
+import { CommonService } from 'src/app/shared/services/common.service';
 @Injectable({
   providedIn: 'root',
 })
 export class CategoryService {
   categoryApiUri: string = environment.baseUrl + '/categories';
   httpOptions: any;
-  constructor(private http: HttpClient, private authservice: AuthService) {
+  constructor(private http: HttpClient, private authservice: AuthService
+    ,private commonService:CommonService) {
     this.httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
@@ -27,7 +29,7 @@ export class CategoryService {
     );
   }
   addCategory(category) {
-    return this.http.post(this.categoryApiUri, category, this.httpOptions);
+   return this.http.post(this.categoryApiUri, category, this.httpOptions);
   }
   updateCategory(category: any) {
     return this.http.put(
@@ -37,9 +39,13 @@ export class CategoryService {
     );
   }
   deleteCategory(category: any) {
+this.commonService.flag = undefined;
     return this.http.delete(
       this.categoryApiUri + '/' + category._id,
       this.httpOptions
+      
     );
+   
+    
   }
 }
